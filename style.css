@@ -1,0 +1,614 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+    background: #dff3ff;
+    color: #222;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: auto;
+    padding: 13px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.nav-container a {
+    color: #174a68;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 9px 15px;
+
+    border-radius: 25px;
+
+    transition: 0.25s;
+}
+
+.nav-container a:hover {
+    background: #5bb9e8;
+    color: white;
+}
+
+.nav-container a.active {
+    background: #328dbd;
+    color: white;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding-top: 90px;
+    padding-bottom: 40px;
+
+    background: #dff3ff;
+
+    /* ป้องกันการเลื่อนหา section อื่น */
+    overflow: hidden;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home-page {
+    min-height: 100vh;
+
+    padding-top: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: #dff3ff;
+
+    overflow: hidden;
+}
+
+.home-content {
+    width: 90%;
+    max-width: 950px;
+}
+
+.home-photo {
+    width: 220px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 7px solid white;
+
+    box-shadow:
+        0 10px 30px rgba(0, 80, 130, 0.25);
+
+    margin-bottom: 25px;
+}
+
+.home-title {
+    color: #174a68;
+
+    font-size: clamp(35px, 6vw, 65px);
+
+    margin-bottom: 15px;
+}
+
+.home-name {
+    color: #256d94;
+
+    font-size: clamp(27px, 4vw, 42px);
+
+    font-weight: 500;
+
+    margin-bottom: 5px;
+}
+
+.home-english {
+    color: #174a68;
+
+    font-size: clamp(22px, 3vw, 32px);
+
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.home-description {
+    color: #31586d;
+
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+
+.portfolio-button {
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    background: #328dbd;
+    color: white;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition: 0.25s;
+}
+
+.portfolio-button:hover {
+    background: #17678e;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 30px rgba(40, 120, 160, 0.15);
+}
+
+.page-title {
+    text-align: center;
+
+    color: #174a68;
+
+    font-size: 40px;
+
+    margin-bottom: 35px;
+}
+
+.page-title::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    background: #50acd8;
+
+    margin: 10px auto 0;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-photo {
+    display: block;
+
+    width: 190px;
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin: 0 auto 30px;
+
+    border: 5px solid #62b9df;
+}
+
+.about-info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px 25px;
+
+    margin-top: 20px;
+}
+
+.info-item {
+    padding: 13px;
+
+    background: #eefaff;
+
+    border-radius: 10px;
+
+    border-left: 4px solid #54add5;
+}
+
+.info-item strong {
+    color: #174a68;
+}
+
+.school {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #eefaff;
+
+    border-radius: 12px;
+
+    font-size: 19px;
+
+    color: #174a68;
+}
+
+
+/* =========================
+   HOBBY
+========================= */
+
+.hobby-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    overflow: hidden;
+
+    background: #f7fdff;
+
+    border-radius: 18px;
+
+    border: 1px solid #ccecf8;
+
+    box-shadow:
+        0 5px 18px rgba(30, 120, 160, 0.10);
+
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card h3 {
+    color: #174a68;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #456675;
+
+    font-size: 18px;
+}
+
+.youtube-button {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 9px 20px;
+
+    background: #ff0000;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    transition: 0.25s;
+}
+
+.youtube-button:hover {
+    background: #cc0000;
+}
+
+
+/* =========================
+   ACTIVITIES
+========================= */
+
+.activity {
+    margin-bottom: 35px;
+
+    padding: 20px;
+
+    background: #f7fdff;
+
+    border-radius: 18px;
+
+    border: 1px solid #ccecf8;
+}
+
+.activity img {
+    display: block;
+
+    width: 100%;
+
+    max-height: 580px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    background: #eaf8fd;
+}
+
+.activity-description {
+    margin-top: 18px;
+
+    font-size: 18px;
+
+    color: #31586d;
+}
+
+.activity-title {
+    color: #174a68;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.university-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.university-card {
+    overflow: hidden;
+
+    background: #f7fdff;
+
+    border-radius: 20px;
+
+    border: 1px solid #ccecf8;
+
+    box-shadow:
+        0 5px 18px rgba(30, 120, 160, 0.10);
+}
+
+.university-card img {
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+}
+
+.university-card p {
+    padding: 20px;
+
+    text-align: center;
+
+    color: #174a68;
+
+    font-size: 19px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    background: #eefaff;
+
+    border-radius: 15px;
+
+    border-left: 5px solid #50acd8;
+}
+
+.contact-icon {
+    width: 45px;
+
+    font-size: 28px;
+
+    text-align: center;
+}
+
+.contact-text {
+    font-size: 18px;
+
+    color: #31586d;
+}
+
+.contact-text strong {
+    color: #174a68;
+}
+
+.contact-text a {
+    color: #247ba5;
+
+    text-decoration: none;
+}
+
+.contact-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #477083;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        padding: 9px 8px;
+
+        gap: 3px;
+    }
+
+    .nav-container a {
+        font-size: 12px;
+
+        padding: 7px 8px;
+    }
+
+    .page {
+        padding-top: 105px;
+    }
+
+    .home-page {
+        padding-top: 105px;
+    }
+
+    .home-photo {
+        width: 170px;
+        height: 170px;
+    }
+
+    .home-title {
+        font-size: 35px;
+    }
+
+    .home-name {
+        font-size: 27px;
+    }
+
+    .home-english {
+        font-size: 23px;
+    }
+
+    .home-description {
+        font-size: 17px;
+    }
+
+    .content {
+        width: 94%;
+
+        padding: 25px 18px;
+    }
+
+    .page-title {
+        font-size: 30px;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-grid,
+    .university-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .university-card img {
+        height: 280px;
+    }
+
+}
